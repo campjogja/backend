@@ -2,7 +2,7 @@ const db = require ('../Configs/db');
 module.exports = {
   getAllUser: () => {
     return new Promise ((resolve, reject) => {
-      db.query ('SELECT * FROM user LIMIT 5 OFFSET 7', (err, response) => {
+      db.query ('SELECT * FROM user', (err, response) => {
         if (!err) {
           resolve (response);
         } else {
